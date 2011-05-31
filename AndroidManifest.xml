@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.kupulau.screennotifier"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:label="HeadsetBooster" android:icon="@drawable/icon">
+	    <activity android:name="com.kupulau.headsetbooster.HeadsetBoosterSettings" android:label="HeadsetBoosterSettings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+	    </activity>
+		<service android:name="com.kupulau.headsetbooster.HeadsetBoosterService">
+		</service>
+		<receiver android:name=".HeadsetBoosterIntentReceiver">
+	            <intent-filter>
+	                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+	                 <category android:name="android.intent.category.HOME" />
+	            </intent-filter>
+	    </receiver>
+    </application>
+</manifest> 
